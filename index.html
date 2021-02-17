@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Loving letter...</title>
+	<meta charset="utf-8">
+	<meta name='viewport' content='width=device-width,initial-scale=1'>
+	<link rel="shortcut icon" href="https://sun9-67.userapi.com/impg/jUvwwbwXVDieUIanDtWgt5pzvFpZfAzsxCLhXw/Da2ORSwUpcg.jpg?size=1620x2160&quality=96&proxy=1&sign=882b05de9f115631f2f69a38ce512c9d&type=album" type="image/x-icon">
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	<section>
+		<p class="text">Meeting you was the best day of my life. When you are next to me, or when we are apart, You are always the first in my thoughts and in my heart. I never ever thought I’d like you this much and I never planned to have you on my mind this often. I love the way you love me. Spring drops and the sun outside the window tell me that this spring will be the flowering of our love. I can’t spend a day without you, can’t you see? I love you so much. You are a part of me and this is forever. You make me happy in a thousand ways. I love you to the moon and back, and I have no idea what I would do, if I lost you, because I feel like I will lose my entire world. Nothing is going change my love for you, you are the man, who helped me to find myself in this life. I can’t imagine living a life without you. You are my reason to be. The wind whispers your name, stars illuminate my way to you, we will meet soon, love you! I couldn’t even imagine being happy before I met you.</p>
+	</section>
+	<script src="anime.min.js"></script>
+	<script type="text/javascript">
+		const text = document.querySelector('.text');
+		text.innerHTML = text.textContent.replace(/\S/g, "<span>$&</span>");
+
+		const animation = anime.timeline({
+			targets : '.text span',
+			easing: 'easeInOutExpo',
+			loop: true,
+		});
+
+		animation
+		.add ({
+			rotate: function(){
+				return anime.random(-360,360);
+			},
+			translateX: function(){
+				return anime.random(-500,500);
+			},
+			translateY: function(){
+				return anime.random(-500,500);
+			},
+			duration: 5000,
+			delay: anime.stagger(20),
+		})
+		.add ({
+			rotate: 0,
+			translateX: 0,
+			translateY: 0,
+			duration: 5000,
+			delay: anime.stagger(20),
+		})
+	</script>
+</body>
+</html>
